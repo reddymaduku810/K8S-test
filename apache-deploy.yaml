@@ -1,0 +1,21 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: my-apache
+  namespace: reddy-ns
+  labels:
+    app: my-apache
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: my-apache
+  selector:
+    matchLabels:
+      app: my-apache
+    containers:
+      - name: apache
+        image: 349948765351.dkr.ecr.eu-west-2.amazonaws.com/reddyrs-repo:latest
+        ports:
+		- containerPort: 80
