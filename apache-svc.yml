@@ -4,13 +4,13 @@ metadata:
   labels:
     app: my-apache
   name: my-apache
-  namespace: my-apache
+  namespace: reddy-ns
 spec:
   ports:
   - name: ssh
-    port: 22
+    port: 80
     protocol: TCP
-    targetPort: 22
+    targetPort: 80
   selector:
     app: my-apache
   type: LoadBalancer
