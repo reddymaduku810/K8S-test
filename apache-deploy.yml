@@ -15,7 +15,7 @@ spec:
     matchLabels:
       app: my-apache
     containers:
-      - name: apche
+      - name: apache
         image: 349948765351.dkr.ecr.eu-west-2.amazonaws.com/reddyrs-repo:latest
         ports:
-		- containerPort: 22
+		- containerPort: 80
